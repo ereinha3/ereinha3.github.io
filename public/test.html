@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Pen Drawing Animation</title>
+    <style>
+        .path {
+            stroke: black;
+            stroke-width: 2;
+            fill: none;
+            stroke-dasharray: 0;
+            stroke-dashoffset: 0;
+        }
+
+
+        /* Define animations */
+        @keyframes draw1 {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+        @keyframes draw2 {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+        @keyframes draw3 {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        /* Apply animations */
+        /* D1 = 370.786 */
+        /* D2 = 267.393 */
+        /* D3 = 60 */
+        #pen1 {
+            stroke-dasharray: 192.5;
+            stroke-dashoffset: 385;
+            animation: draw1 5s linear infinite;
+        }
+        #pen2 {
+            stroke-dasharray: 135.5;
+            stroke-dashoffset: 271;
+            animation: draw2 5s linear infinite;
+        }
+        #pen3 {
+            stroke-dasharray: 30;
+            stroke-dashoffset: 60;
+            animation: draw3 5s linear infinite;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <svg id="svgContainer" width="200" height="200" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+            <!-- Paths to be drawn -->
+            <path id="pen1" class="path" d="M 2.0 2.0 L 62.0 2.0 L 62.0 17.0 L 17.0 17.0 L 17.0 32.0 L 42.0 32.0 L 42.0 47.0 L 17.0 47.0 L 17.0 62.0 L 77.0 62.0 L 77.0 107.0 L 57.6066017178 107.0 L 77.0 147.0"/>
+            <path id="pen2" class="path" d="M 2.0 2.0 L 2.0 77.0 L 32.0 77.0 L 32.0 147.0 L 47.0 147.0 L 47.0 117.606601718 L 62.0 147.0 L 77.0 147.0"/>
+            <path id="pen3" class="path" d="M 62.0 92.0 L 62.0 77.0 L 47.0 77.0 L 47.0 92.0 L 62.0 92.0"/>
+
+            <!-- Pen circles representing the pen tips -->
+            <circle class="pen" style="animation: movePen1 5s linear forwards;"></circle>
+            <circle class="pen" style="animation: movePen2 5s linear forwards;"></circle>
+            <circle class="pen" style="animation: movePen3 5s linear forwards;"></circle>
+        </svg>
+    </div>
+</body>
+</html>

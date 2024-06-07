@@ -1,0 +1,393 @@
+:root {
+    --navbar-height: 8vh;
+}
+
+
+/* Overriding Built-Ins */
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+
+/* User Defined Classes */
+
+
+/* Marquee */
+.marquee{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 4vh;
+    overflow: hidden;
+    text-shadow: #333;
+    opacity: 1;
+    transition: color 1s ease;
+    color: #000;
+    background-color: #FFF;
+    z-index: 9999;
+}
+
+.marquee-hidden{
+    top: -10vh;
+}
+
+.hidden {
+    color: #fff;
+}
+
+.marquee-text{
+    text-transform: uppercase;
+    text-shadow: #333;
+    font-style: italic;
+    position: absolute;
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-left 8s linear infinite;
+    color: inherit;
+}
+
+.marquee:hover .marquee-text {
+    animation-play-state: paused;
+}
+
+#marquee-text1{
+    animation-delay: 0s;
+}
+
+/* Setting the Animation using Keyframes */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(110vw);
+    }
+
+    100% {
+        transform: translateX(-20vw);
+    }
+}
+
+
+/* Navbar Classes */
+.navbar{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: var(--navbar-height); 
+    top: 5vh;
+    left: 0;
+    padding: 0;
+    margin: -1%;
+    transition: top 0.3s ease;
+    opacity: 1;
+    background-color: #FFF;
+    z-index: 9999;
+}
+
+.navbar-hidden{
+    top: -10vh;
+}
+
+.image-container{
+    position: absolute;
+    left: 5%;
+    width: var(--navbar-height);
+    height: var(--navbar-height);
+}
+
+.path {
+    stroke: black;
+    stroke-width: 2;
+    fill: none;
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
+}
+
+.logo{
+    height: 100%;
+}
+
+/* Define animations */
+@keyframes draw1 {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes draw2 {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes draw3 {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Apply animations */
+/* D1 = 370.786 */
+/* D2 = 267.393 */
+/* D3 = 60 */
+#pen1 {
+    stroke-dasharray: 192.5;
+    stroke-dashoffset: 385;
+    animation: draw1 5s linear infinite;
+}
+#pen2 {
+    stroke-dasharray: 135.5;
+    stroke-dashoffset: 271;
+    animation: draw2 5s linear infinite;
+}
+#pen3 {
+    stroke-dasharray: 30;
+    stroke-dashoffset: 60;
+    animation: draw3 5s linear infinite;
+}
+
+.navbar-links-container{
+    position: absolute;
+    width: 60%;
+    right: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+.navbar-link{
+    white-space: nowrap;
+    font-size: 1.5vw;
+    margin: 0 2%;
+    font-weight: bold;
+    letter-spacing: .1rem;
+}
+
+.navbar-link:hover{
+	text-decoration: underline;
+	text-underline-offset: 1em;
+    color: #555;
+}
+
+/* Intro-Container */
+
+.intro-container{
+    margin: 20vh auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.my-name-is{
+    display: flex;
+    width: 60vw;
+    justify-content: center;
+    font-size: 2vh;
+    text-align: center;
+}
+
+.ethan{
+    margin-top: 3vh;
+    display: flex;
+    width: 60vw;
+    justify-content: center;
+    text-align: center;
+    font-size: 8vh;
+}
+
+.what-i-love{
+    margin-top: 2vh;
+    display: flex;
+    width: 80vw;
+    justify-content: center;
+    font-size: 6vh;
+    text-align: center;
+}
+
+.what-i-do{
+    margin-top: 4vh;
+    display: flex;
+    width: 80vw;
+    justify-content: center;
+    text-align: center;
+    font-size: 2vh;
+}
+
+
+.about, .experience{
+    width: 70%;
+    margin: 40vh auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-title, .experience-title{
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 10vh auto;
+}
+
+.about-content{
+    margin: 4vh auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+@media (max-width: 1000px) {
+    .about-content {
+        flex-direction: column;
+    }
+    .about-text { 
+        width: 70%;
+        margin-right: 0;
+        margin-bottom: 5%;
+    }
+}
+
+.about-text{
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    width: 55%;
+    margin-right: 10%;
+}
+
+.about-image{
+    position: relative;
+    width: 24vw;
+    height: 32vw;
+    border-radius: 5%;
+    perspective: 1000px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.tabbed-paragraph{
+    text-indent: 2rem;
+}
+
+.front-image, .back-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    border-radius: 5%;
+    backface-visibility: hidden;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.about-image:hover .front-image{
+    transform: rotateY(180deg);
+    /* animation: rotate-front 2s linear, kill-alpha 2s forwards; */
+}
+
+.about-image:hover .back-image{
+    transform: rotateY(0deg);
+    opacity: 1;
+    /* animation: rotate-back 2s linear, wake-alpha 2s forwards; */
+}
+
+.back-image{
+    transform: rotateY(-180deg);
+    opacity: 0;
+}
+
+.experience-text{
+    width: 100%;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    text-align: center;
+}
+
+.experience-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.inline-link:hover{
+    color: #AAA;
+}
+
+.languages-container, .technologies-container{
+    margin: 5% 1%;
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    background-color: #ddd;
+    border-style: solid;
+    border-color: #000;
+    border-width: .2rem;
+    border-radius: 20px;
+    border-collapse: collapse;
+}
+
+.languages-title, .technologies-title{
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
+    margin: 3% 0;
+}
+
+.languages-list, .technologies-list{
+    margin: 0 5%;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.languages-list > li, .technologies-list > li{
+    width: 25%;
+    margin: 3% 0;
+}
+
+
+
+
+
+
+
+
+
+/* Fixed Ixon Classes */
+.fixed-icon-container{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 5vh;
+    left: 1.5vw;
+    width: 3vw;
+    height: 40vh;  
+}
+
+.fixed-icon{
+    fill: #000;
+    align-self: center;
+    justify-content: center;
+    width: 80%;
+    height: 80%;
+}
+
+.fixed-icon:hover{
+    fill: gray;
+}

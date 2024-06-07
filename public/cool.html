@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Path Tracing Animation</title>
+    <style>
+        .path {
+            stroke: black;
+            stroke-width: 2;
+            fill: none;
+            stroke-dasharray: 200; /* Length of the path */
+            stroke-dashoffset: 200; /* Start at the beginning of the path */
+            animation: dash 5s linear forwards;
+        }
+
+        @keyframes dash {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Path to be traced -->
+            <path class="path" d="M10 10 L190 10 L190 190 L10 190 Z"/>
+        </svg>
+    </div>
+</body>
+</html>
