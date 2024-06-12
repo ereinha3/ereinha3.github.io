@@ -7,16 +7,25 @@
 a{
     text-decoration: none;
     color: #000;
+    /* cursor: url("../img/neweye.png") 8 8, default; */
+    cursor: crosshair;
 }
 
-body{
+html{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
+    /* cursor: url("../img/neweye.png") 8 8, default; */
+    cursor: crosshair;
 }
-
 
 /* User Defined Classes */
 
+/* .eyelid {
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    pointer-events: none;
+    z-index: 9999;
+} */
 
 /* Marquee */
 .marquee{
@@ -30,7 +39,7 @@ body{
     transition: color 1s ease;
     color: #000;
     background-color: #FFF;
-    z-index: 9999;
+    z-index: 999;
 }
 
 .marquee-hidden{
@@ -88,7 +97,7 @@ body{
     transition: top 0.3s ease;
     opacity: 1;
     background-color: #FFF;
-    z-index: 9999;
+    z-index: 999;
 }
 
 .navbar-hidden{
@@ -222,7 +231,7 @@ body{
 }
 
 
-.about, .experience{
+.about, .experience, .projects{
     width: 70%;
     margin: 40vh auto;
     display: flex;
@@ -231,7 +240,7 @@ body{
     justify-content: center;
 }
 
-.about-title, .experience-title{
+.about-title, .experience-title, .projects-title{
     text-align: center;
     font-size: 2.5rem;
     margin: 10vh auto;
@@ -306,7 +315,7 @@ body{
     opacity: 0;
 }
 
-.experience-text{
+.experience-text, .projects-text{
     width: 100%;
     font-size: 1.5rem;
     letter-spacing: .1rem;
@@ -328,40 +337,231 @@ body{
     width: 49%;
     display: flex;
     flex-direction: column;
-    background-color: #ddd;
-    border-style: solid;
-    border-color: #000;
-    border-width: .2rem;
-    border-radius: 20px;
-    border-collapse: collapse;
+}
+
+/* Media query for screens smaller than 1000px */
+@media (max-width: 1000px) {
+    .experience-container {
+        flex-direction: column; /* Change flex direction to column */
+    }
+
+    .languages-container, .technologies-container {
+        width: 100%; /* Set width to 100% */
+    }
 }
 
 .languages-title, .technologies-title{
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+    text-decoration: wavy;
     width: 100%;
     text-align: center;
     margin: 3% 0;
 }
 
 .languages-list, .technologies-list{
-    margin: 0 5%;
+    height: 35vh;
+    width: 100%;
     margin-top: 3%;
     margin-bottom: 5%;
     display: flex;
+    position: relative;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
     text-align: left;
+} 
+
+.large-3D-text{
+    text-shadow: -4px 12px 8px rgba(0, 0, 0, 0.5);
+    font-size: 2.5rem;
 }
 
-.languages-list > li, .technologies-list > li{
-    width: 25%;
-    margin: 3% 0;
+.medium-3D-text{
+    text-shadow: -3px 8px 6px rgba(0, 0, 0, 0.5);
+    font-size: 2rem;
+}
+
+.small-3D-text{
+    text-shadow: -2px 4px 4px rgba(0, 0, 0, 0.5);
+    font-size: 1.5rem;
+}
+
+.large-3D-text, .medium-3D-text, .small-3D-text{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Language spatial declarations */
+
+.js{
+    top: 10%;
+    left: 65%;
+}
+
+.c{
+    top: 35%;
+    left: 10%;
+}
+
+.python{
+    top: 65%;
+    left: 40%;
+}
+
+.html{
+    top: 5%;
+    left: 30%;
+}
+
+.css{
+    top: 75%;
+    left: 80%;
+}
+
+.csharp{
+    top: 40%;
+    left: 55%;
+}
+
+.bash{
+    top: 95%;
+    left: 25%;
+}
+
+.cpp{
+    top: 45%;
+    left: 75%;
+}
+
+.scheme{
+    top: 80%;
+    left: 5%;
+}
+
+.haskell{
+    top: 10%;
+    left: 10%;
+}
+
+.swift {
+    top: 40%;
+    left: 35%;
+}
+
+.sml {
+    top: 100%;
+    left: 65%;
+}
+
+/* Technology space declarations */
+
+.github{
+    top: 40%;
+    left: 40%;
+}
+
+.unity { 
+    top: 70%;
+    left: 15%;
+}
+
+.react {
+    left: 20%;
+    top: 15%;
+}
+
+.docker{
+    top: 30%;
+    left: 70%;
+}
+
+.blender{
+    top: 80%; 
+    left: 60%;
+}
+
+.linux{
+    top: 5%;
+    left: 60%;
 }
 
 
+.projects-list{
+    margin: 5% 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-between;
+}
 
+.project{
+    width: 44%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 50px;
+    border-color: #000;
+    border-width: .1rem;
+    border-style: solid;
+    margin: 2.5% 2.5%;
+}
 
+.project-title{
+    border-radius: 45px 45px 0 0;
+    background-color: #000;
+    color: #FFF;
+
+}
+
+.project-title > p{
+    text-align: center;
+    margin: 5% 3%;
+    font-size: 1.5rem;
+}
+
+.project-description{
+    padding: 8% 3%;
+    font-size: 1.25rem;
+    text-align: center
+}
+
+.project-skills{
+    display: flex;
+    justify-content: space-around;
+    padding: 0% 3% 5% 3%;
+    flex-wrap: wrap;
+}
+
+.project-skill{
+    margin: 3% 3%;
+    padding: 3% 3%;
+    border-radius: 50px;
+    background-color: #000;
+    color: #FFF;
+}
+
+.project {
+    &:hover {
+      .project-title,
+      .project-skill {
+        background-color: #555;
+      }
+      .project-title > p{
+        font-size: 1.75rem;
+      }
+      .project-description{
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+.project:hover{
+    width: 47.5%;
+    margin: 0 1.25%;
+}
 
 
 
@@ -391,3 +591,5 @@ body{
 .fixed-icon:hover{
     fill: gray;
 }
+
+

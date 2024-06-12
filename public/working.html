@@ -19,6 +19,21 @@
     </head> 
 
     <body>
+        <!-- <svg viewBox="0 0 210 210" class="eyelid" id="eyelid">
+            <g>
+           <path
+              style="fill:#6a6a6a;fill-opacity:0;stroke:#000000;stroke-width:5;stroke-dasharray:none"
+              d="m 3.792165,101.19155 c 0,0 50.604354,-47.517958 101.208715,-47.517958 50.60435,0 101.20871,49.411518 101.20871,49.411518 0,0 -50.60436,53.2413 -101.20871,53.2413 -50.604361,0 -101.208715,-55.13486 -101.208715,-55.13486 z"
+              id="path2" />
+           <path
+              style="fill:#6a6a6a;fill-opacity:0;stroke:#000000;stroke-width:4.99999"
+              d="m 3.7921649,101.19155 c 0,0 42.9734041,-28.051963 101.2078151,-28.879058 58.2344,-0.827095 101.20961,30.772618 101.20961,30.772618 0,0 -47.09869,33.31977 -101.20961,34.6024 C 50.889048,138.97013 3.7921649,101.19155 3.7921649,101.19155 Z"
+              id="path3" />
+         </g>
+        </svg> -->
+
+
+
         <header class="marquee" id="marquee">
             <div class="marquee-text" id="marquee-text">
                 Thank you for checking out my portfolio!
@@ -39,7 +54,7 @@
                 <a href="#experience" class="navbar-link">
                     Experience
                 </a>
-                <a href="../base/base.html" class="navbar-link">
+                <a href="#projects" class="navbar-link">
                     Projects
                 </a>
                 <a href="../base/base.html" class="navbar-link">
@@ -89,7 +104,7 @@
         <div class="experience" id="experience">
             <div class="experience-title">Experience</div>
             <div class="experience-text">
-                <p>
+                <p class="tabbed-paragraph">
                     I've worked with a variety of technologies throughout under-graduate curriculumn, clubs, and personal projects. 
                     The technologies and languages listed below are in order of relative experience. 
                     Outside of these, I also have experience with
@@ -97,7 +112,8 @@
                     <a class="inline-link" href="https://github.com/ereinha3/Operating-Systems/tree/main/Project1">OS management</a>, 
                     <a class="inline-link" href="https://github.com/ereinha3/Operating-Systems/tree/main/Project3">multi-threading</a>, 
                     <!-- Add the stuff from CS 472 later... -->
-                    cryptography, many Python libraries including PyTorch,  
+                    cryptography, many Python libraries including PyTorch, 
+                    <a class="inline-link" href="https://github.com/ereinha3/Operating-Systems/tree/main/Project3">TensorFlow</a>, 
                     and a versatile background in Applied Mathematics.
                 </p>
             </div>
@@ -107,30 +123,43 @@
                         Languages
                     </div>
                     <div class="languages-list">
-                        <li>
+                        <div class="python large-3D-text">
                             Python
-                        </li>
-                        <li>
+                        </div>
+                        <div class="c large-3D-text">
                             C
-                        </li>
-                        <li>
-                            Bash / Kernel Scripting
-                        </li>
-                        <li>
-                            C++
-                        </li>
-                        <li>
-                            HTML
-                        </li>
-                        <li>
-                            CSS
-                        </li>
-                        <li>
+                        </div>
+                        <div class="js large-3D-text">
                             JavaScript
-                        </li>
-                        <li>
+                        </div>
+                        <div class="bash medium-3D-text">
+                            Bash
+                        </div>
+                        <div class="cpp medium-3D-text">
+                            C++
+                        </div>
+                        <div class="html medium-3D-text">
+                            HTML
+                        </div>
+                        <div class="css medium-3D-text">
+                            CSS
+                        </div>
+                        <div class="csharp medium-3D-text">
+                            C#
+                        </div>
+                        <div class="swift small-3D-text">
                             Swift
-                        </li>
+                        </div>
+                        <div class="scheme small-3D-text">
+                            Scheme
+                        </div>
+                        <div class="sml small-3D-text">
+                            SML
+                        </div>
+                        <div class="haskell small-3D-text">
+                            Haskell
+                        </div>
+                        
                     </div>
                 </div>
                 <div class="technologies-container">
@@ -138,25 +167,136 @@
                         Technologies
                     </div>
                     <div class="technologies-list">
-                        <li>
+                        <div class="github large-3D-text">
                             GitHub
-                        </li>
-                        <li>
+                        </div>
+                        <div class="unity large-3D-text">
                             Unity
-                        </li>
-                        <li>
+                        </div>
+                        <div class="linux large-3D-text">
+                            Linux
+                        </div>
+                        <div class="docker medium-3D-text">
                             Docker
-                        </li>
-                        <li>
+                        </div>
+                        <div class="react medium-3D-text">
                             React
-                        </li>
-                        <li>
+                        </div>
+                        <div class="blender small-3D-text">
                             Blender
-                        </li>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
 
+
+        <div class="projects" id="projects">
+            <div class="projects-title">Projects</div>
+            <div class="projects-content">
+                <div class="projects-text">
+                    <p class="tabbed-paragraph">
+                        I am passionate for creating AI/ML models to improve effiency in daily life and make education more accessible. 
+                        I will be doing research over summer on modeling plume dynamics given environmental data for a given area as well as creating software to interface this to the public, hopefully helping prevent new or stunt existing wildfires. 
+                        I have a newfound passion for game development and will be continuing a project over summer with the goal of publishing on Steam, more updates will be given throughout progress. 
+                        I will additionally be pursuing launching Guppy, a "non-profit" Regulation Crowdfunding Intermediary with all profits channeled directly toward improving higher-education in Oregon!
+                        Aside from these, I have extensive curricular projects showing my versatile background below.
+                    </p>
+                </div>
+                <div class="projects-list">
+                    <div class="project">
+                        <div class="project-title">
+                            <p>
+                                Watch Profits Soar to the Ether: Analyzing the Potential for Various RNNs of Predicting Future Ether Prices
+                            </p>
+                        </div>
+
+                        <div class="project-description">
+                            Blockchains in the decentralized web space have opened a new market for investing. 
+                            Unfortunately, the volatility of cryptocurrency prices make them difficult to predict compared to stable fiat currencies. 
+                            In this work, we analyze the market trends of Ether, one of the most widely used cryptocurrencies, and attempt to train various Recurrent Neural Networks to predict future Ether prices. 
+                            We examine Long Short-Term Memory (LSTM) variants and Gated Recurrent Units (GRUs), comparing and analyzing the performance of four different models. 
+                            Setting a constant of a 10-day future prediction, our results indicate that the GRU model had the highest comparative accuracy. 
+                            While these results are not accurate enough for capital gains on investment, we look to improve these in the future with more data.
+                        </div>
+                        <div class="project-skills">
+                            <div class="project-skill">
+                                Machine Learning
+                            </div>
+                            <div class="project-skill">
+                                TensorFlow
+                            </div>
+                            <div class="project-skill">
+                                Data Processing
+                            </div>
+                            <div class="project-skill">
+                                Model Optimization
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <div class="project-title">
+                            <p>
+                                Watch Profits Soar to the Ether: Analyzing the Potential for Various RNNs of Predicting Future Ether Prices
+                            </p>
+                        </div>
+                        <div class="project-description">
+                            Blockchains in the decentralized web space have opened a new market for investing. 
+                            Unfortunately, the volatility of cryptocurrency prices make them difficult to predict compared to stable fiat currencies. 
+                            In this work, we analyze the market trends of Ether, one of the most widely used cryptocurrencies, and attempt to train various Recurrent Neural Networks to predict future Ether prices. 
+                            We examine Long Short-Term Memory (LSTM) variants and Gated Recurrent Units (GRUs), comparing and analyzing the performance of four different models. 
+                            Setting a constant of a 10-day future prediction, our results indicate that the GRU model had the highest comparative accuracy. 
+                            While these results are not accurate enough for capital gains on investment, we look to improve these in the future with more data.
+                        </div>
+                        <div class="project-skills">
+                            <div class="project-skill">
+                                Machine Learning
+                            </div>
+                            <div class="project-skill">
+                                TensorFlow
+                            </div>
+                            <div class="project-skill">
+                                Data Processing
+                            </div>
+                            <div class="project-skill">
+                                Model Optimization
+                            </div>
+                        </div>
+                    </div>
+                    <a href="https://github.com/ereinha3/Watch-Profits-Soar-to-the-Ether">
+                        <div class="project">
+                            <div class="project-title">
+                                <p>
+                                    Watch Profits Soar to the Ether: Analyzing the Potential for Various RNNs of Predicting Future Ether Prices
+                                </p>
+                            </div>
+                            <div class="project-description">
+                                Blockchains in the decentralized web space have opened a new market for investing. 
+                                Unfortunately, the volatility of cryptocurrency prices make them difficult to predict compared to stable fiat currencies. 
+                                In this work, we analyze the market trends of Ether, one of the most widely used cryptocurrencies, and attempt to train various Recurrent Neural Networks to predict future Ether prices. 
+                                We examine Long Short-Term Memory (LSTM) variants and Gated Recurrent Units (GRUs), comparing and analyzing the performance of four different models. 
+                                Setting a constant of a 10-day future prediction, our results indicate that the GRU model had the highest comparative accuracy. 
+                                While these results are not accurate enough for capital gains on investment, we look to improve these in the future with more data.
+                            </div>
+                            <div class="project-skills">
+                                <div class="project-skill">
+                                    Machine Learning
+                                </div>
+                                <div class="project-skill">
+                                    TensorFlow
+                                </div>
+                                <div class="project-skill">
+                                    Data Processing
+                                </div>
+                                <div class="project-skill">
+                                    Model Optimization
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
         </div>
 
 
@@ -212,8 +352,8 @@
                   </svg>
             </a>
             <a href="https://medium.com/@ethanreinhart">
-                <svg class="fixed-icon" viewBox="0 -55 256 256" preserveAspectRatio="xMidYMid">
-                        <path d="M72.2009141,1.42108547e-14 C112.076502,1.42108547e-14 144.399375,32.5485469 144.399375,72.6964154 C144.399375,112.844284 112.074049,145.390378 72.2009141,145.390378 C32.327779,145.390378 0,112.844284 0,72.6964154 C0,32.5485469 32.325326,1.42108547e-14 72.2009141,1.42108547e-14 Z M187.500628,4.25836743 C207.438422,4.25836743 223.601085,34.8960455 223.601085,72.6964154 L223.603538,72.6964154 C223.603538,110.486973 207.440875,141.134463 187.503081,141.134463 C167.565287,141.134463 151.402624,110.486973 151.402624,72.6964154 C151.402624,34.9058574 167.562834,4.25836743 187.500628,4.25836743 Z M243.303393,11.3867175 C250.314,11.3867175 256,38.835526 256,72.6964154 C256,106.547493 250.316453,134.006113 243.303393,134.006113 C236.290333,134.006113 230.609239,106.554852 230.609239,72.6964154 C230.609239,38.837979 236.292786,11.3867175 243.303393,11.3867175 Z" fill="#000000"></path>
+                <svg class="fixed-icon" viewBox="0 -55 256 256" >
+                        <path d="M72.2009141,1.42108547e-14 C112.076502,1.42108547e-14 144.399375,32.5485469 144.399375,72.6964154 C144.399375,112.844284 112.074049,145.390378 72.2009141,145.390378 C32.327779,145.390378 0,112.844284 0,72.6964154 C0,32.5485469 32.325326,1.42108547e-14 72.2009141,1.42108547e-14 Z M187.500628,4.25836743 C207.438422,4.25836743 223.601085,34.8960455 223.601085,72.6964154 L223.603538,72.6964154 C223.603538,110.486973 207.440875,141.134463 187.503081,141.134463 C167.565287,141.134463 151.402624,110.486973 151.402624,72.6964154 C151.402624,34.9058574 167.562834,4.25836743 187.500628,4.25836743 Z M243.303393,11.3867175 C250.314,11.3867175 256,38.835526 256,72.6964154 C256,106.547493 250.316453,134.006113 243.303393,134.006113 C236.290333,134.006113 230.609239,106.554852 230.609239,72.6964154 C230.609239,38.837979 236.292786,11.3867175 243.303393,11.3867175 Z"></path>
                 </svg>
             </a>
             <a href="mailto:info@bagsofloveinc.org">
@@ -228,6 +368,7 @@
                 </svg>
             </a>
         </div>
+
 
         <script src="../src/script.js"></script>
 
