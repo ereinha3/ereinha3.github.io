@@ -178,7 +178,7 @@ html{
     letter-spacing: .1rem;
 }
 
-.navbar-link:hover{
+.navbar-link:hover, .contact-link:hover{
 	text-decoration: underline;
 	text-underline-offset: 1em;
     color: #555;
@@ -241,7 +241,7 @@ html{
     justify-content: center;
 }
 
-.about-title, .experience-title, .projects-title{
+.about-title, .experience-title, .projects-title, .contact-title{
     text-align: center;
     font-size: 2.5rem;
     margin: 10vh auto;
@@ -573,9 +573,35 @@ html{
     margin: 0 0;
 }
 
+.contact-container{
+    margin: -10vh 0 5vh 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
+.contact-container{
+    padding: 8vh 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
 
+.contact-intro{
+    font-size: 2rem;
+}
 
+.contact-content{
+    margin: 8vh 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    font-size: 2rem;
+}
 
 /* Fixed Ixon Classes */
 .fixed-icon-container{
