@@ -7,6 +7,16 @@ document.addEventListener('DOMContentLoaded', () => {
           marquee.classList.add("hidden")
       }
   });
+
+  const links = document.querySelectorAll('a');
+  links.forEach(link => {
+      link.target = "_blank";
+  });
+
+  const overrides = document.getElementsByClassName('link_override');
+  for (let i = 0; i < overrides.length; i++) {
+    overrides[i].target = "_self";
+  }
 });
 
 const marquee = document.getElementById('marquee')

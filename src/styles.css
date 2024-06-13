@@ -1,5 +1,6 @@
 :root {
     --navbar-height: 8vh;
+    --project-height: 60vh;
 }
 
 
@@ -186,7 +187,7 @@ html{
 /* Intro-Container */
 
 .intro-container{
-    margin: 20vh auto;
+    margin: 30vh auto 20vh auto;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -356,7 +357,7 @@ html{
     text-decoration: wavy;
     width: 100%;
     text-align: center;
-    margin: 3% 0;
+    margin: 3% 0 8% 0;
 }
 
 .languages-list, .technologies-list{
@@ -500,30 +501,33 @@ html{
 
 .project{
     width: 44%;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     border-radius: 50px;
     border-color: #000;
     border-width: .1rem;
     border-style: solid;
-    margin: 2.5% 2.5%;
+    margin: 2vh 2vh;
 }
 
 .project-title{
+    height: 10vh;
     border-radius: 45px 45px 0 0;
     background-color: #000;
     color: #FFF;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .project-title > p{
     text-align: center;
-    margin: 5% 3%;
     font-size: 1.5rem;
 }
 
 .project-description{
-    padding: 8% 3%;
+    padding: 8% 3% 3% 3%;
     font-size: 1.25rem;
     text-align: center
 }
@@ -531,8 +535,8 @@ html{
 .project-skills{
     display: flex;
     justify-content: space-around;
-    padding: 0% 3% 5% 3%;
     flex-wrap: wrap;
+    margin: 0 5%;
 }
 
 .project-skill{
@@ -541,26 +545,32 @@ html{
     border-radius: 50px;
     background-color: #000;
     color: #FFF;
+    font-size: 1rem;
 }
 
 .project {
     &:hover {
       .project-title,
       .project-skill {
-        background-color: #555;
+        background-color: #777;
       }
       .project-title > p{
-        font-size: 1.75rem;
+        font-size: 2rem;
       }
       .project-description{
         font-size: 1.3rem;
+      }
+      .project-skill{
+        margin: 2% 2%;
+        font-size: 1.25rem;
       }
     }
   }
 
 .project:hover{
+    height: 64vh;
     width: 47.5%;
-    margin: 0 1.25%;
+    margin: 0 0;
 }
 
 
